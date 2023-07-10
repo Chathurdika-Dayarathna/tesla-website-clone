@@ -1,0 +1,312 @@
+*{
+    box-sizing: border-box;
+}
+html,body{
+    padding: 0;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+    position: relative;
+    font-family: 'Gotham ssm';
+    font-size: 14px;
+}
+.image{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    scroll-snap-align: end;
+    /* position: absolute; */
+}
+.image:first-child{
+    /* background-color: aqua; */
+    background-image: url(/img/blue-car.jpeg);
+}
+.image:nth-child(2){
+    /* background-color: lightcoral; */
+    background-image: url(/img/dark-red-car.jpeg);
+}
+.image:nth-child(3){
+    /* background-color: lightgoldenrodyellow; */
+    background-image: url(/img/red-car.jpeg);
+}
+.image:nth-child(4){
+    /* background-color: rgb(132, 255, 167); */
+    background-image: url(/img/white-car.jpeg);
+}    
+.image:nth-child(5){
+    /* background-color: rgb(132, 255, 167); */
+    background-image: url(/img/solar-home.jpeg);
+}
+.image:nth-child(6){
+    /* background-color: rgb(132, 255, 167); */
+    background-image: url(/img/black-car-home.webp);
+}
+.image:nth-child(7){
+    /* background-color: rgb(132, 255, 167); */
+    background-image: url(/img/acce.jpeg);
+}
+header{
+    position: fixed;
+    top: 0;
+}
+#header-banner{
+    background-color: white;
+    width: 100vw;
+    line-height: 20px;
+    padding: 16px;
+    text-align: center;
+    color: #393c41;
+}
+a{
+    color: #171a20;
+}
+#logo-container{
+    height: 56px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 32px;
+    font-weight: 500;
+    color: #171a20;
+    animation-name: appear-animation;
+    animation-duration: 1s;
+}
+#logo-container svg{
+    width: 152px;
+    height: 32px;
+    padding: 0 16px;
+}
+.menu-container{
+    display: flex;
+    height: 56px;
+    align-items: center;
+    /* justify-content: space-around; */
+}
+#logo-container > div:nth-child(1){
+    width: calc(50vw - 400px);
+    /* background-color: aquamarine; */
+}
+#logo-container > div:nth-child(2){
+    width: 723.56px;
+    /* background-color: rgb(255, 202, 127); */
+}
+#logo-container > div:nth-child(3){
+    width: calc(50vw - 400px);
+    /* background-color: rgb(172, 127, 255); */
+}
+#logo-container > div:nth-child(3) > .menu-container{
+    justify-content: flex-end;
+}
+#logo-container > div:nth-child(2){
+    justify-content: center;
+}
+
+.menu-container > div{
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 16px;
+    border-radius: 5px;
+    transition-property: background-color;
+    transition-duration: 0.33s;
+}
+.menu-container > div:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+main > div:first-child{
+    /* background-color: rgb(98, 0, 255); */
+    height: 48px;
+}
+main > div{
+    display: flex;
+    justify-content: center;
+}
+main > div:nth-child(2){
+    padding-top: 6px;
+    animation-name: move-up-animation-2;
+    animation-duration: 2s;
+}
+
+main{
+    margin-top: 160px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100vw;
+    /* height: 200px; */
+    /* background-color: yellow; */
+    transform: translateX(-7px)translateY(5px);
+}
+main > :first-child{
+    /* background-color: red; */
+    font-size: 39px;
+    height: 48px;
+    font-weight: 500;
+    animation-name: move-up-animation-1;
+    animation-duration: 1.5s;
+}
+a{
+    text-underline-offset: 3px;
+}
+footer{
+    position: fixed;
+    bottom: 79px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+#bottom-buttons{
+    /* background-color: aqua; */
+    width: 552px;
+    display: flex;
+    justify-content: space-between;
+    transform: translateX(-8px);
+}
+#bottom-buttons > button{
+    height: 40px;
+    width: 264px;
+    font-family: 'Gotham ssm';
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 5px;
+}
+#bottom-buttons > button:first-child{
+    background-color: #45484D;
+    color: #F8F8F8;
+    animation-name: order-now-button-animation;
+    animation-duration: 2s;
+}
+#bottom-buttons > button:last-child{
+    background-color: #F8F8F8;
+    color: #45484D;
+    animation-name: demo-drive-button-animation;
+    animation-duration: 2s;
+}
+#down-arrow svg{
+    position: fixed;
+    bottom: 25px;
+    fill: #45484D;
+    width: 24px;
+    height: 24px;
+    animation-name: arrow-move;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+#down-arrow{
+    display: flex;
+    justify-content: center;
+    /* animation-name: arrow-move-down;
+    animation-duration: 1s; */
+}
+@keyframes arrow-move{
+    from{
+        transform: translateY(0px);
+    }
+    20%{
+        transform: translateY(6px);
+    }
+    35%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(3px);
+    }
+    65%{
+        transform: translateY(0px);
+    }
+}
+@keyframes appear-animation{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes move-up-animation-1{
+    from{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0;
+    }
+    51%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    60%{
+        opacity: 1;
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes move-up-animation-2{
+    from{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    61%{
+        opacity: 1;
+        transform: translateY(20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+@keyframes order-now-button-animation{
+    from{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    61%{
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    85%{
+        opacity: 1;
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+@keyframes demo-drive-button-animation{
+    from{
+        opacity: 0;
+    }
+    60%{
+        opacity: 0;
+    }
+    61%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    85%{
+        opacity: 1;
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+/* @keyframes arrow-move-down{
+    from{
+        opacity: 0;
+    }
+    80%{
+        opacity: 1;
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+} */
+
+
+
